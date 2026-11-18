@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><style id="styles-uiux-nazca-2026">:root{color-scheme:light;--ink:#27343a;--muted:#59686d;--charcoal:#203137;--paper:#fffdf8;--canvas:#f4f1e8;--surface:#fff;--terracotta:#9d3f2f;--terracotta-dark:#783024;--ochre:#c78b24;--ochre-soft:#f7e9bd;--turquoise:#2e6f73;--green:#3f7258;--blue:#356a82;--purple:#6a5185;--danger:#91382f;--line:#d8d8ce;--focus:#ffbf47;--radius:.85rem;--radius-lg:1.25rem;--shadow:0 .35rem 1.2rem rgb(32 49 55/.09);--shadow-hover:0 .9rem 2.2rem rgb(32 49 55/.16);--content:76rem;--ease:cubic-bezier(.2,.8,.2,1)}
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style id="styles-uiux-nazca-2026">:root{color-scheme:light;--ink:#27343a;--muted:#59686d;--charcoal:#203137;--paper:#fffdf8;--canvas:#f4f1e8;--surface:#fff;--terracotta:#9d3f2f;--terracotta-dark:#783024;--ochre:#c78b24;--ochre-soft:#f7e9bd;--turquoise:#2e6f73;--green:#3f7258;--blue:#356a82;--purple:#6a5185;--danger:#91382f;--line:#d8d8ce;--focus:#ffbf47;--radius:.85rem;--radius-lg:1.25rem;--shadow:0 .35rem 1.2rem rgb(32 49 55/.09);--shadow-hover:0 .9rem 2.2rem rgb(32 49 55/.16);--content:76rem;--ease:cubic-bezier(.2,.8,.2,1)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5.75rem;-webkit-text-size-adjust:100%}body{min-width:0;margin:0;color:var(--ink);background:linear-gradient(180deg,#fbfaf5,var(--canvas));font:1rem/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}img,video,iframe,svg{display:block;max-width:100%}img{height:auto}button,input,textarea,select{font:inherit}p,ul,ol{margin-top:0}ul,ol{padding-left:1.35rem}li+li{margin-top:.35rem}a{color:var(--blue);text-decoration-thickness:.09em;text-underline-offset:.18em}a,button,summary{transition:color .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .25s var(--ease),transform .25s var(--ease),filter .2s ease}a:hover{color:var(--terracotta-dark)}:focus-visible{outline:3px solid var(--focus);outline-offset:3px}.skip{position:fixed;z-index:1000;top:.7rem;left:.7rem;padding:.7rem 1rem;color:#fff;background:var(--charcoal);border:3px solid var(--focus);border-radius:.55rem;font-weight:800;text-decoration:none;transform:translateY(-170%)}.skip:focus{transform:none}
 header,.hero{position:relative;isolation:isolate;display:grid;align-content:center;min-height:18rem;padding:4.75rem 1rem 3rem;color:#fff;text-align:center;background:linear-gradient(125deg,var(--charcoal),var(--terracotta) 62%,var(--ochre));border-bottom:.35rem solid var(--ochre);overflow:hidden}.hero-bg{position:absolute;inset:0;z-index:-2}.hero-bg a,.hero-bg img{width:100%;height:100%}.hero-bg img{object-fit:cover;filter:none}header::after,.hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgb(23 31 34/.42),rgb(23 31 34/.14) 50%,rgb(23 31 34/.34))}.hero-content{position:relative;z-index:1}header h1,.hero h1{max-width:26ch;margin:.55rem auto .85rem;color:#fff;font:700 clamp(2rem,8vw,3.75rem)/1.08 Georgia,"Times New Roman",serif;text-wrap:balance;text-shadow:0 2px 8px rgb(0 0 0/.75)}header p,.hero p{max-width:65rem;margin:.4rem auto;color:#fff;font-size:clamp(1rem,2.3vw,1.17rem);text-shadow:0 2px 5px rgb(0 0 0/.8)}.tag,.badge,.pill{display:inline-flex;align-items:center;margin:.2rem;padding:.4rem .72rem;color:#fff;background:rgb(255 255 255/.18);border:1px solid rgb(255 255 255/.5);border-radius:999px;font-size:.86rem;font-weight:800;backdrop-filter:blur(4px)}
 .nav,nav{position:sticky;z-index:100;top:0;display:flex;align-items:center;gap:.45rem;width:min(100%,calc(var(--content) + 2rem));margin:0 auto 1rem;padding:.7rem 1rem;overflow-x:auto;color:var(--terracotta);background:rgb(255 253 248/.96);border:1px solid var(--line);border-top:0;border-radius:0 0 var(--radius-lg) var(--radius-lg);box-shadow:var(--shadow);scroll-snap-type:x proximity;overscroll-behavior-inline:contain;scrollbar-width:thin;backdrop-filter:blur(12px)}.nav-inner{display:flex;align-items:center;gap:.45rem;min-width:max-content}.nav-title,.nav-inner>strong,nav>strong{flex:0 0 auto;white-space:nowrap;color:var(--terracotta);font-size:.86rem;font-weight:900}.nav a,nav>a,.nav-inner>a{flex:0 0 auto;display:inline-flex;min-height:2.55rem;align-items:center;padding:.48rem .74rem;color:var(--terracotta-dark);background:#fff2e8;border:1px solid transparent;border-radius:999px;font-size:.84rem;font-weight:800;text-decoration:none;white-space:nowrap;scroll-snap-align:start}.nav a:hover,nav>a:hover,.nav-inner>a:hover{color:#fff;background:var(--terracotta);box-shadow:0 .35rem .9rem rgb(157 63 47/.2);transform:translateY(-1px)}
@@ -55,7 +56,106 @@ html{overflow-x:visible;scroll-padding-top:1rem}body{min-width:0;max-width:100%;
 @media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:48rem){.cols,.grid,.gallery,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}table,.align-table{min-width:100%}}@media(min-width:64rem){.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%;text-align:center}}@media(max-width:23.4375rem){.hero-photo-below .hero-content{padding:1.25rem 0}.hero-photo-below .hero-bg{width:100%;margin-bottom:.75rem}main,.container{padding:.75rem}.actions>button,.print-actions>button{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(forced-colors:active){button,.btn,.nav a,nav a,.tag,.badge{border:1px solid ButtonText}}@media print{html,body{overflow:visible}.nav,nav,.skip,.no-print,button,.btn,.actions,.print-actions,.video,.video-grid{display:none!important}.hero-photo-below{display:block;padding:.5cm;color:#111;background:#fff;border-bottom:1px solid #777}.hero-photo-below .hero-content{width:auto;padding:0}.hero-photo-below .hero-content h1,.hero-photo-below .hero-content p{color:#111;text-shadow:none}.hero-photo-below .hero-bg{display:none}.table,.table-wrap{overflow:visible}table,.align-table{min-width:0}thead{display:table-header-group}}
 </style>
 <link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/><title>Nasca: regularidades, transformaciones y modelización geométrica | Guide enseignant réservé</title><meta content="Correction détaillée en français et en espagnol de la fiche DNL sur la géométrie et les motifs Nazca." name="description"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="robots"/><meta content="noindex, nofollow, noarchive, nosnippet, noimageindex" name="googlebot"/><meta content="no-referrer" name="referrer"/>
-</head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenu">Aller au contenu</a><header class="hero hero-photo-below"><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Géométrie Nasca / Geometría Nasca · transformations · mesures · modélisation prudente</p></div><div class="hero-bg"><a aria-label="Vue aérienne du géoglyphe du singe de Nazca (s’ouvre dans un nouvel onglet)" href="https://commons.wikimedia.org/wiki/File:L%C3%ADneas_de_Nazca,_Nazca,_Per%C3%BA,_2015-07-29,_DD_49.JPG" rel="noopener noreferrer" target="_blank" title="Ouvrir la photographie dans un nouvel onglet"><img alt="Vue aérienne du géoglyphe du singe de Nazca" data-offline-message="Image indisponible hors connexion." decoding="async" fetchpriority="high" height="4587" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%ADneas%20de%20Nazca%2C%20Nazca%2C%20Per%C3%BA%2C%202015-07-29%2C%20DD%2049.JPG?width=1600" width="6894"/></a></div></header>
+<style id="uiux-wcag-22-aa">
+/* Interface responsive et accessible */
+:root{
+  color-scheme:light;
+  --ui-bg:#f3f6f4;
+  --ui-surface:#fffdf8;
+  --ui-text:#1d2d32;
+  --ui-muted:#526268;
+  --ui-primary:#0f5d50;
+  --ui-primary-strong:#0a433a;
+  --ui-accent:#8a3d1c;
+  --ui-accent-strong:#642b14;
+  --ui-gold:#b6851f;
+  --ui-border:#b9c9c3;
+  --ui-focus:#ffbf47;
+  --ui-danger:#8f2f2a;
+  --ui-radius-sm:.625rem;
+  --ui-radius-md:1rem;
+  --ui-radius-lg:1.375rem;
+  --ui-shadow:0 .25rem 1rem rgb(20 52 45 / .10);
+  --ui-content:76rem;
+  --ui-gutter:clamp(.75rem,3vw,2rem);
+  --ui-tap:2.75rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{min-width:0;overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;margin:0;overflow-x:clip;color:var(--ui-text);background:linear-gradient(180deg,#fafcfb 0,var(--ui-bg) 34rem);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1rem;line-height:1.65}
+header,main,footer,nav,section,article,aside,figure,div{min-width:0}
+main,.container,.wrap{width:min(100%,calc(var(--ui-content) + 2 * var(--ui-gutter)));margin-inline:auto;padding-inline:var(--ui-gutter)}
+img,picture,video,canvas,iframe{display:block;max-width:100%;height:auto}
+img{filter:none!important;opacity:1!important}
+svg{max-width:100%;height:auto}
+h1,h2,h3,h4{overflow-wrap:break-word;word-break:normal;hyphens:auto;text-wrap:balance;line-height:1.2}
+p,li,td,th,figcaption,.caption,.cap{overflow-wrap:anywhere}
+a{color:#145b78;text-decoration-thickness:.09em;text-underline-offset:.18em}
+a:hover{color:var(--ui-accent)}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--ui-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .18rem #fff,0 0 0 .4rem var(--ui-focus)!important}
+:where(button,.btn,a,summary){-webkit-tap-highlight-color:transparent}
+button,.btn,input,select,textarea,summary{font:inherit}
+button,.btn,summary,.nav a,nav a{min-height:var(--ui-tap)}
+button,.btn{max-width:100%;padding:.7rem 1rem;border-radius:999px;transition:background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+button:hover,.btn:hover{transform:translateY(-1px)}
+button:active,.btn:active,a:active,summary:active{transform:translateY(1px)}
+.skip{z-index:10000}
+header{display:flex!important;min-height:0!important;padding:0!important;flex-direction:column!important;overflow:hidden;color:#fff;background:var(--ui-primary-strong);border-bottom:.35rem solid var(--ui-gold)}
+header::before,header::after{display:none!important;content:none!important}
+header>.hero-bg{position:relative!important;inset:auto!important;z-index:0!important;order:0!important;width:100%!important;height:auto!important;max-height:none!important;margin:0!important;overflow:hidden;background:#dfe8e4}
+header>.hero-bg a,header>.hero-bg img{display:block;width:100%;height:auto}
+header>.hero-bg img{aspect-ratio:16/7;object-fit:cover;object-position:center;background:transparent}
+header>.hero-content,header>.wrap,header>.header-copy{position:relative!important;z-index:1!important;order:1!important;width:min(100%,var(--ui-content));margin-inline:auto;padding:clamp(1.25rem,4vw,2.75rem) var(--ui-gutter)!important;color:#fff;background:transparent!important;text-align:center}
+header h1,header h2,header p{max-width:68rem;margin-inline:auto;color:#fff!important;text-shadow:none!important}
+header .tag,header .badge{color:#fff!important;background:var(--ui-accent-strong)!important;border:1px solid #fff!important}
+.nav,body>nav{position:static!important;width:100%!important;margin:0!important;padding:.65rem var(--ui-gutter)!important;overflow:visible!important;background:rgb(255 253 248 / .98)!important;border-bottom:1px solid var(--ui-border);box-shadow:var(--ui-shadow)}
+.nav-inner,body>nav{display:grid!important;grid-template-columns:minmax(0,1fr);gap:.5rem;align-items:stretch}
+.nav-inner>strong,body>nav>strong{position:static!important;grid-column:1/-1;padding:.3rem;color:var(--ui-accent-strong);background:transparent!important;text-align:center;white-space:normal!important}
+.nav-inner>a,body>nav>a{display:flex!important;min-width:0!important;align-items:center;justify-content:center;padding:.55rem .7rem;text-align:center;white-space:normal!important;border:1px solid transparent;border-radius:999px}
+.grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:1rem!important}
+.grid>*,.gallery>*,.ext-media>*,.cols>*,.cards>*,.sessions>*,.session-grid>*{min-width:0}
+.card,.exercise,.intro,.rubric,.box,.task,.media-card,.gallery-item,details{max-width:100%;border-color:var(--ui-border)!important;border-radius:var(--ui-radius-lg)!important;box-shadow:var(--ui-shadow)}
+.table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+table{width:100%;max-width:100%;border-collapse:collapse}
+th,td{padding:.65rem;vertical-align:top}
+textarea,input,select{max-width:100%}
+textarea{width:100%;resize:vertical}
+details{overflow:hidden}
+details[open]{overflow:visible}
+details>summary{display:list-item;padding:1rem 1.1rem;cursor:pointer;list-style-position:inside}
+details>summary:hover{color:#fff;background:var(--ui-accent)}
+figure{max-width:100%;margin-inline:0}
+footer{display:flex;min-height:0;align-items:center;justify-content:center;margin-top:2rem;padding:1.25rem var(--ui-gutter);color:#fff;background:var(--ui-primary-strong);border-top:.3rem solid var(--ui-gold);text-align:center}
+footer p{max-width:var(--ui-content);margin:0;color:#fff}
+@media (min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:48rem){.grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.nav-inner,body>nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:64rem){.nav-inner,body>nav{display:flex!important;flex-wrap:wrap;justify-content:center}.nav-inner>strong,body>nav>strong{flex-basis:100%}.grid,.cards,.sessions,.session-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (min-width:90rem){body{font-size:1.0625rem}}
+@media (max-width:20rem){body{font-size:.9375rem}main,.container,.wrap{padding-inline:.625rem}button,.btn,.actions button,.document-actions button{width:100%}header>.hero-bg img{aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (forced-colors:active){button,.btn,a,summary{border:1px solid ButtonText}.tag,.badge{border:1px solid CanvasText!important}}
+@media print{
+  @page{size:A4;margin:1.4cm}
+  html,body{overflow:visible!important;color:#111;background:#fff;font-size:10pt}
+  .skip,.nav,body>nav,.no-print,.actions,.document-actions,button,.btn{display:none!important}
+  header{display:block!important;color:#111;background:#fff;border:1px solid #777}
+  header>.hero-bg{display:none!important}
+  header>.hero-content,header>.wrap,header>.header-copy{width:auto;padding:.5cm!important}
+  header h1,header h2,header p,header .tag,header .badge{color:#111!important;background:#fff!important;border-color:#777!important}
+  main,.container,.wrap{width:100%;padding:0}
+  .grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{display:block!important}
+  .card,.exercise,.intro,.rubric,.box,.task,.media-card,.gallery-item,details,figure{box-shadow:none!important;break-inside:avoid}
+  details>summary{display:none}
+  details>:not(summary){display:block!important}
+  .table-wrap{overflow:visible!important}
+  table{font-size:8.5pt}
+  thead{display:table-header-group}
+  h1,h2,h3,h4{break-after:avoid}
+  a{color:#111;text-decoration:underline}
+  footer{color:#111;background:#fff;border-top:1px solid #777}
+  footer p{color:#111}
+}
+</style></head><body data-extension-policy="collapsed-on-load"><a class="skip" href="#contenu">Aller au contenu</a><header class="hero hero-photo-below"><div class="hero-content"><span class="tag">DNL · Mathématiques en espagnol</span><h1>Guide enseignant réservé</h1><p>Géométrie Nasca / Geometría Nasca · transformations · mesures · modélisation prudente</p></div><div class="hero-bg"><a aria-label="Vue aérienne du géoglyphe du singe de Nazca (s’ouvre dans un nouvel onglet)" href="https://commons.wikimedia.org/wiki/File:L%C3%ADneas_de_Nazca,_Nazca,_Per%C3%BA,_2015-07-29,_DD_49.JPG" rel="noopener noreferrer" target="_blank" title="Ouvrir la photographie dans un nouvel onglet"><img alt="Vue aérienne du géoglyphe du singe de Nazca" data-offline-message="Image indisponible hors connexion." decoding="async" fetchpriority="high" height="4587" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/L%C3%ADneas%20de%20Nazca%2C%20Nazca%2C%20Per%C3%BA%2C%202015-07-29%2C%20DD%2049.JPG?width=1600" style="max-width:100%;height:auto" width="6894"/></a></div></header>
 <div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Télécharger le texte / Descargar texto</button><button data-action="print" type="button">Imprimer / Imprimir</button></div><nav aria-label="Navigation des exercices / Navegación de los ejercicios"><strong>Exercices / Ejercicios :</strong><a href="#ex1">1</a><a href="#ex2">2</a><a href="#ex3">3</a><a href="#ex4">4</a><a href="#ex5">5</a><a href="#ex6">6</a><a href="#ex7">7</a><a href="#ex8">8</a><a href="#ex9">9</a><a href="#ex10">10</a><a href="#ex11">11</a><a href="#ex12">12</a><a href="#ex13">13</a><a href="#ex14">14</a><a href="#ex15">15</a><a href="#ex16">16</a></nav><main id="contenu" tabindex="-1"><section class="intro" id="cadrage-pedagogique"><h2>Cadrage pédagogique et scénario</h2>
 <ul><li><strong>Niveau:</strong> Seconde DNL mathématiques-espagnol.</li><li><strong>Prérequis:</strong> fractions, pourcentages, proportionnalité, théorème de Pythagore et transformations du plan.</li><li><strong>Problématique:</strong> comment un modèle géométrique aide-t-il à décrire un objet ou une image patrimoniale sans prétendre en expliquer seul la signification?</li><li><strong>Objectifs mathématiques:</strong> calculer et interpréter une raison, un pourcentage, une échelle, un angle de rotation et une diagonale; distinguer valeur exacte et approximation.</li><li><strong>Objectifs langagiers:</strong> décrire, ordonner une procédure, justifier, reformuler et signaler une limite.</li><li><strong>CECRL:</strong> A2 vers B1 selon le parcours. A2: décrire avec phrases simples et lexique fourni. A2+/B1: expliquer avec <i>primero, después, porque</i>. B1: justifier, nuancer avec <i>sin embargo</i> et distinguer observation et interprétation.</li><li><strong>Vigilance:</strong> distinguer erreur linguistique et erreur mathématique; ne pas pénaliser deux fois une même difficulté.</li></ul>
 <h3>Déroulement conseillé, trois séances de 55 min</h3><ol><li><strong>Séance 1:</strong> exercices 1, 3, 5 et 7; description, vérification et pourcentage.</li><li><strong>Séance 2:</strong> exercices 8, 9 et 10; échelle, modèle rectangulaire et translation.</li><li><strong>Séance 3:</strong> exercices 12, 14 et 16; contraintes, évaluation critériée et synthèse.</li></ol><p>Les exercices 2, 4 et 6 servent d’appui; 11, 13 et 15 de différenciation ou de prolongement.</p></section><section class="intro" id="bareme-exact"><h2>Barème exact sur 20 points</h2><p>Ce barème s’applique à la production finale: motif annoté, calcul vérifié et synthèse orale ou écrite en espagnol. Les exercices intermédiaires relèvent de l’évaluation formative non chiffrée.</p><div aria-label="Barème exact" class="table" role="region" tabindex="0"><table><caption>Barème analytique sur 20 points</caption><thead><tr><th scope="col">Domaine</th><th scope="col">Points</th><th scope="col">Indicateurs</th></tr></thead><tbody><tr><td>Compréhension mathématique</td><td>6</td><td>Transformation, mesure, calcul, unité et interprétation exacts.</td></tr><tr><td>Démarche et vérification</td><td>4</td><td>Stratégie explicitée et contrôle par tracé, calcul, superposition ou conversion inverse.</td></tr><tr><td>Interprétation culturelle</td><td>3</td><td>Distingue objet, photographie, modèle, fait et hypothèse.</td></tr><tr><td>Communication en espagnol</td><td>3</td><td>Description et justification compréhensibles, connecteurs adaptés.</td></tr><tr><td>Vocabulaire mathématique</td><td>2</td><td>Eje, centro, ángulo, traslación, escala, razón et porcentaje employés précisément.</td></tr><tr><td>Autonomie et médiation</td><td>2</td><td>Reformulation, écoute, coopération et révision.</td></tr><tr><th scope="row">Total</th><th scope="row">20</th><th scope="row">Ne pas pénaliser deux fois une même difficulté linguistique.</th></tr></tbody></table></div></section><section class="intro" id="bareme-detaille-exercices"><h2>Barème détaillé de la production finale sur 20 points</h2>

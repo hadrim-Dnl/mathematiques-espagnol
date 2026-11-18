@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+
 
 <html lang="es">
 <head>
@@ -67,10 +68,10 @@ img{max-width:100%;height:auto;filter:none;opacity:1}
 :where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--focus);outline-offset:.2rem;box-shadow:0 0 0 .2rem #fff,0 0 0 .4rem var(--focus)}
 .hero-photo-below{display:flex;min-height:0;padding:0;flex-direction:column;color:#fff;background:var(--teal-dark);border-bottom:.4rem solid var(--gold);overflow:visible;text-align:center}
 .hero-photo-below::before,.hero-photo-below::after{display:none;content:none}
-.hero-photo-below .hero-content{order:0;width:min(calc(100% - 2 * clamp(.75rem,2.2vw,2rem)),68rem);margin-inline:auto;padding:clamp(1.5rem,4vw,2.75rem) 0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
+.hero-photo-below .hero-content{order:1;width:min(calc(100% - 2 * clamp(.75rem,2.2vw,2rem)),68rem);margin-inline:auto;padding:clamp(1.5rem,4vw,2.75rem) 0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}
 .hero-photo-below .hero-content h1,.hero-photo-below .hero-content p{color:#fff;background:transparent;border:0;box-shadow:none;text-shadow:none}
 .hero-photo-below .hero-content .tag,.hero-photo-below .hero-content .badge{display:inline-flex;width:fit-content;max-width:100%;min-height:2.25rem;margin:.2rem;padding:.35rem .7rem;color:#fff;background:var(--terra-dark);border:1px solid #fff;border-radius:999px;line-height:1.2;white-space:normal}
-.hero-photo-below .hero-bg{position:relative;inset:auto;z-index:0;order:1;width:min(100%,68rem);height:auto;margin:0 auto clamp(1rem,3vw,2rem);overflow:hidden;background:#dfe8e4;border:0;box-shadow:none}
+.hero-photo-below .hero-bg{position:relative;inset:auto;z-index:0;order:0;width:min(100%,68rem);height:auto;margin:0 auto clamp(1rem,3vw,2rem);overflow:hidden;background:#dfe8e4;border:0;box-shadow:none}
 .hero-photo-below .hero-bg a,.hero-photo-below .hero-bg img{display:block;width:100%;height:auto}
 .hero-photo-below .hero-bg img{aspect-ratio:8142/4934;object-fit:cover;object-position:center;background:transparent;filter:none;opacity:1}
 .nav{position:static;overflow:visible}
@@ -87,13 +88,112 @@ main,.container{width:min(100%,calc(var(--content) + 2rem));padding:clamp(.75rem
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){button,.btn,.nav a,nav a,.tag,.badge{border:1px solid ButtonText}}
 @media print{html,body{overflow:visible}.nav,nav,.skip,.no-print,button,.btn,.actions,.document-actions{display:none!important}.hero-photo-below{display:block;padding:.5cm;color:#111;background:#fff;border-bottom:1px solid #777}.hero-photo-below .hero-content{width:auto;padding:0}.hero-photo-below .hero-content h1,.hero-photo-below .hero-content p{color:#111;text-shadow:none}.hero-photo-below .hero-bg{display:none}.table-wrap{overflow:visible}table{min-width:0}thead{display:table-header-group}}</style><meta content="strict-origin-when-cross-origin" name="referrer"/>
-</head>
+<style id="uiux-wcag-22-aa">
+/* Interface responsive et accessible */
+:root{
+  color-scheme:light;
+  --ui-bg:#f3f6f4;
+  --ui-surface:#fffdf8;
+  --ui-text:#1d2d32;
+  --ui-muted:#526268;
+  --ui-primary:#0f5d50;
+  --ui-primary-strong:#0a433a;
+  --ui-accent:#8a3d1c;
+  --ui-accent-strong:#642b14;
+  --ui-gold:#b6851f;
+  --ui-border:#b9c9c3;
+  --ui-focus:#ffbf47;
+  --ui-danger:#8f2f2a;
+  --ui-radius-sm:.625rem;
+  --ui-radius-md:1rem;
+  --ui-radius-lg:1.375rem;
+  --ui-shadow:0 .25rem 1rem rgb(20 52 45 / .10);
+  --ui-content:76rem;
+  --ui-gutter:clamp(.75rem,3vw,2rem);
+  --ui-tap:2.75rem;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{min-width:0;overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:1rem}
+body{min-width:0;max-width:100%;margin:0;overflow-x:clip;color:var(--ui-text);background:linear-gradient(180deg,#fafcfb 0,var(--ui-bg) 34rem);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1rem;line-height:1.65}
+header,main,footer,nav,section,article,aside,figure,div{min-width:0}
+main,.container,.wrap{width:min(100%,calc(var(--ui-content) + 2 * var(--ui-gutter)));margin-inline:auto;padding-inline:var(--ui-gutter)}
+img,picture,video,canvas,iframe{display:block;max-width:100%;height:auto}
+img{filter:none!important;opacity:1!important}
+svg{max-width:100%;height:auto}
+h1,h2,h3,h4{overflow-wrap:break-word;word-break:normal;hyphens:auto;text-wrap:balance;line-height:1.2}
+p,li,td,th,figcaption,.caption,.cap{overflow-wrap:anywhere}
+a{color:#145b78;text-decoration-thickness:.09em;text-underline-offset:.18em}
+a:hover{color:var(--ui-accent)}
+:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:.2rem solid var(--ui-focus)!important;outline-offset:.2rem!important;box-shadow:0 0 0 .18rem #fff,0 0 0 .4rem var(--ui-focus)!important}
+:where(button,.btn,a,summary){-webkit-tap-highlight-color:transparent}
+button,.btn,input,select,textarea,summary{font:inherit}
+button,.btn,summary,.nav a,nav a{min-height:var(--ui-tap)}
+button,.btn{max-width:100%;padding:.7rem 1rem;border-radius:999px;transition:background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+button:hover,.btn:hover{transform:translateY(-1px)}
+button:active,.btn:active,a:active,summary:active{transform:translateY(1px)}
+.skip{z-index:10000}
+header{display:flex!important;min-height:0!important;padding:0!important;flex-direction:column!important;overflow:hidden;color:#fff;background:var(--ui-primary-strong);border-bottom:.35rem solid var(--ui-gold)}
+header::before,header::after{display:none!important;content:none!important}
+header>.hero-bg{position:relative!important;inset:auto!important;z-index:0!important;order:0!important;width:100%!important;height:auto!important;max-height:none!important;margin:0!important;overflow:hidden;background:#dfe8e4}
+header>.hero-bg a,header>.hero-bg img{display:block;width:100%;height:auto}
+header>.hero-bg img{aspect-ratio:16/7;object-fit:cover;object-position:center;background:transparent}
+header>.hero-content,header>.wrap,header>.header-copy{position:relative!important;z-index:1!important;order:1!important;width:min(100%,var(--ui-content));margin-inline:auto;padding:clamp(1.25rem,4vw,2.75rem) var(--ui-gutter)!important;color:#fff;background:transparent!important;text-align:center}
+header h1,header h2,header p{max-width:68rem;margin-inline:auto;color:#fff!important;text-shadow:none!important}
+header .tag,header .badge{color:#fff!important;background:var(--ui-accent-strong)!important;border:1px solid #fff!important}
+.nav,body>nav{position:static!important;width:100%!important;margin:0!important;padding:.65rem var(--ui-gutter)!important;overflow:visible!important;background:rgb(255 253 248 / .98)!important;border-bottom:1px solid var(--ui-border);box-shadow:var(--ui-shadow)}
+.nav-inner,body>nav{display:grid!important;grid-template-columns:minmax(0,1fr);gap:.5rem;align-items:stretch}
+.nav-inner>strong,body>nav>strong{position:static!important;grid-column:1/-1;padding:.3rem;color:var(--ui-accent-strong);background:transparent!important;text-align:center;white-space:normal!important}
+.nav-inner>a,body>nav>a{display:flex!important;min-width:0!important;align-items:center;justify-content:center;padding:.55rem .7rem;text-align:center;white-space:normal!important;border:1px solid transparent;border-radius:999px}
+.grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:1rem!important}
+.grid>*,.gallery>*,.ext-media>*,.cols>*,.cards>*,.sessions>*,.session-grid>*{min-width:0}
+.card,.exercise,.intro,.rubric,.box,.task,.media-card,.gallery-item,details{max-width:100%;border-color:var(--ui-border)!important;border-radius:var(--ui-radius-lg)!important;box-shadow:var(--ui-shadow)}
+.table-wrap{width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+table{width:100%;max-width:100%;border-collapse:collapse}
+th,td{padding:.65rem;vertical-align:top}
+textarea,input,select{max-width:100%}
+textarea{width:100%;resize:vertical}
+details{overflow:hidden}
+details[open]{overflow:visible}
+details>summary{display:list-item;padding:1rem 1.1rem;cursor:pointer;list-style-position:inside}
+details>summary:hover{color:#fff;background:var(--ui-accent)}
+figure{max-width:100%;margin-inline:0}
+footer{display:flex;min-height:0;align-items:center;justify-content:center;margin-top:2rem;padding:1.25rem var(--ui-gutter);color:#fff;background:var(--ui-primary-strong);border-top:.3rem solid var(--ui-gold);text-align:center}
+footer p{max-width:var(--ui-content);margin:0;color:#fff}
+@media (min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:48rem){.grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.nav-inner,body>nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:64rem){.nav-inner,body>nav{display:flex!important;flex-wrap:wrap;justify-content:center}.nav-inner>strong,body>nav>strong{flex-basis:100%}.grid,.cards,.sessions,.session-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media (min-width:90rem){body{font-size:1.0625rem}}
+@media (max-width:20rem){body{font-size:.9375rem}main,.container,.wrap{padding-inline:.625rem}button,.btn,.actions button,.document-actions button{width:100%}header>.hero-bg img{aspect-ratio:4/3}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (forced-colors:active){button,.btn,a,summary{border:1px solid ButtonText}.tag,.badge{border:1px solid CanvasText!important}}
+@media print{
+  @page{size:A4;margin:1.4cm}
+  html,body{overflow:visible!important;color:#111;background:#fff;font-size:10pt}
+  .skip,.nav,body>nav,.no-print,.actions,.document-actions,button,.btn{display:none!important}
+  header{display:block!important;color:#111;background:#fff;border:1px solid #777}
+  header>.hero-bg{display:none!important}
+  header>.hero-content,header>.wrap,header>.header-copy{width:auto;padding:.5cm!important}
+  header h1,header h2,header p,header .tag,header .badge{color:#111!important;background:#fff!important;border-color:#777!important}
+  main,.container,.wrap{width:100%;padding:0}
+  .grid,.gallery,.ext-media,.cols,.cards,.sessions,.session-grid{display:block!important}
+  .card,.exercise,.intro,.rubric,.box,.task,.media-card,.gallery-item,details,figure{box-shadow:none!important;break-inside:avoid}
+  details>summary{display:none}
+  details>:not(summary){display:block!important}
+  .table-wrap{overflow:visible!important}
+  table{font-size:8.5pt}
+  thead{display:table-header-group}
+  h1,h2,h3,h4{break-after:avoid}
+  a{color:#111;text-decoration:underline}
+  footer{color:#111;background:#fff;border-top:1px solid #777}
+  footer p{color:#111}
+}
+</style></head>
 <body><a class="skip" href="#contenido-principal">Ir al contenido principal</a>
-<header class="hero hero-photo-below" id="top"><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde · quipus · valor posicional</span><h1 id="titulo-pagina">Quipus incas y valor posicional</h1><p>Observar, modelizar, codificar, leer, comprobar y explicar un modelo escolar de quipu, distinguiéndolo de los quipus históricos.</p></div><div class="hero-bg"><a aria-label="Vista de Machu Picchu (se abre en una nueva pestaña)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,%20Per%C3%BA,%202015-07-30,%20DD_58.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista de Machu Picchu" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="4934" loading="eager" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG/1280px-Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG" width="8142"/></a></div></header>
+<header class="hero hero-photo-below" id="top"><div class="hero-bg"><a aria-label="Vista de Machu Picchu (se abre en una nueva pestaña)" class="img-link" href="https://commons.wikimedia.org/wiki/File:Machu_Picchu,%20Per%C3%BA,%202015-07-30,%20DD_58.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista de Machu Picchu" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="4934" loading="eager" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG/1280px-Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_58.JPG" style="max-width:100%;height:auto" width="8142"/></a><p class="small media-credit">Photographie : Diego Delso, 30 juillet 2015, CC BY-SA 4.0, via Wikimedia Commons.</p></div><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Seconde · quipus · valor posicional</span><h1 id="titulo-pagina">Quipus incas y valor posicional</h1><p>Observar, modelizar, codificar, leer, comprobar y explicar un modelo escolar de quipu, distinguiéndolo de los quipus históricos.</p></div></header>
 <nav aria-label="Navegación principal de la ficha" class="nav" id="navegacion-trabajo-incas"><div class="nav-inner"><strong>Navegación:</strong><a href="#basico">Iniciación</a><a href="#intermedio">Consolidación</a><a href="#avanzado">Razonamiento</a><a href="#experto">Desafío guiado</a><a href="#traza-exposicion">Producción</a><a href="#rubrica">Criterios</a><a href="#extensiones">Ampliaciones</a><a href="#extension-yupana">Yupana</a><a href="#top">Inicio</a></div></nav>
 <main aria-labelledby="titulo-pagina" id="contenido-principal" tabindex="-1">
 <section aria-label="Convención de trabajo" class="note" id="convencion-trabajo"><strong>Convención de trabajo: </strong>en este modelo escolar, cada cuerda corresponde a una categoría y contiene cuatro zonas ordenadas de abajo arriba: unidades, decenas, centenas y millares. Cada zona contiene de 0 a 9 marcas; una zona sin marcas representa la cifra 0 y debe conservarse al leer el número. Verifica cada lectura mediante una descomposición decimal. En el modelo escolar hablamos de marcas; en los objetos históricos observamos nudos de tipos diversos. Esta convención es una modelización didáctica y no una reconstrucción completa de la lectura de los quipus históricos.</section><section aria-labelledby="objetivos-ficha" class="card" id="objetivos-ficha-seccion"><h2 id="objetivos-ficha">Objetivos y requisitos</h2><ul><li><strong>Nivel:</strong> Seconde.</li><li><strong>Nivel lingüístico orientativo:</strong> A2+ hacia B1.</li><li><strong>Prerrequisitos matemáticos:</strong> leer y descomponer números enteros; utilizar porcentajes simples.</li><li><strong>Objetivo matemático:</strong> representar, descomponer y verificar enteros en un modelo posicional decimal.</li><li><strong>Objetivo lingüístico:</strong> describir, justificar, comparar y formular un límite en español.</li><li><strong>Objetivo cultural y crítico:</strong> distinguir un objeto histórico de su modelización escolar.</li></ul></section><section class="note" id="organizacion"><strong>Organización recomendada: </strong>recorrido distribuido en tres o cuatro sesiones. Los ejercicios 1 a 8 constituyen el recorrido común; los ejercicios 9 a 16 pueden seleccionarse según los objetivos y el nivel de autonomía.</section><section aria-labelledby="titulo-seccion-14" id="basico"><div class="title"><h2 id="titulo-seccion-14">1. Iniciación</h2><p>Observar, contar, descomponer y explicar con frases simples.</p></div>
-<article class="exercise basic" data-level="b"><h3>Ejercicio 1 · Describir la estructura visible y distinguir observación y modelo</h3><div class="meta"><span class="badge">5 min</span></div><p class="small method-hint">Describe primero lo visible; interpreta después con prudencia.</p><div class="task">Observa la fotografía. Escribe cuatro frases: describe la cuerda principal, las cuerdas colgantes y los grupos de nudos; después distingue lo que realmente observas del modelo decimal escolar utilizado en esta ficha. No atribuyas un valor numérico a la fotografía.</div><div class="card"><a aria-label="Fotografía de un quipu inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Quipu conservado en el Museo Larco: cuerda principal, cuerdas colgantes y grupos de nudos visibles" class="exercise-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="380" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Inca_Quipu.jpg?width=1200" width="625"/></a><p class="small">Quipu conservado en el Museo Larco. Observa la estructura visible; la fotografía no permite leer de forma fiable un número exacto.</p></div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 1 — Describir la estructura visible y distinguir observación y modelo" data-answer="" id="ans1" placeholder="Escribe aquí tu respuesta..."></textarea></div></article>
+<article class="exercise basic" data-level="b"><h3>Ejercicio 1 · Describir la estructura visible y distinguir observación y modelo</h3><div class="meta"><span class="badge">5 min</span></div><p class="small method-hint">Describe primero lo visible; interpreta después con prudencia.</p><div class="task">Observa la fotografía. Escribe cuatro frases: describe la cuerda principal, las cuerdas colgantes y los grupos de nudos; después distingue lo que realmente observas del modelo decimal escolar utilizado en esta ficha. No atribuyas un valor numérico a la fotografía.</div><div class="card"><a aria-label="Fotografía de un quipu inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Inca_Quipu.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Quipu conservado en el Museo Larco: cuerda principal, cuerdas colgantes y grupos de nudos visibles" class="exercise-image" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="380" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Inca_Quipu.jpg?width=1200" style="max-width:100%;height:auto" width="625"/></a><p class="small media-credit">Photographie d’un quipu du Museo Larco : Claus Ableiter, CC BY-SA 3.0 / GFDL, via Wikimedia Commons.</p><p class="small">Quipu conservado en el Museo Larco. Observa la estructura visible; la fotografía no permite leer de forma fiable un número exacto.</p></div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 1 — Describir la estructura visible y distinguir observación y modelo" data-answer="" id="ans1" placeholder="Escribe aquí tu respuesta..."></textarea></div></article>
 <article class="exercise basic" data-level="b"><h3>Ejercicio 2 · Leer las unidades y justificar el valor</h3><div class="meta"><span class="badge">5 min</span></div><p class="small method-hint">Identifica la posición, cuenta las marcas y verifica.</p><div class="task">En el modelo escolar, la zona de unidades contiene 7 marcas y las demás zonas están vacías. ¿Qué cifra aparece en la zona de unidades? ¿Qué número representa la cuerda? Justifica con una igualdad.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 2 — Leer las unidades y justificar el valor" data-answer="" id="ans2"></textarea></div></article>
 <article class="exercise basic" data-level="b"><h3>Ejercicio 3 · Leer decenas y unidades mediante una suma posicional</h3><div class="meta"><span class="badge">7 min</span></div><p class="small method-hint">Multiplica cada cifra por el valor de su posición.</p><div class="task">En el modelo escolar, la zona de decenas contiene 2 marcas y la zona de unidades contiene 5 marcas. Las demás zonas están vacías. Escribe el número y verifícalo con una suma posicional.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 3 — Leer decenas y unidades mediante una suma posicional" data-answer="" id="ans3"></textarea></div></article>
 <article class="exercise basic" data-level="b"><h3>Ejercicio 4 · Representar y verificar 234</h3><div class="meta"><span class="badge">8 min</span></div><p class="small method-hint">Separa centenas, decenas y unidades, después recompón el número.</p><div class="task">Representa 234 en una cuerda del modelo escolar con tres zonas: centenas, decenas y unidades. Puedes dibujarla o describirla. Indica el número de marcas de cada zona y verifica con una descomposición decimal.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 4 — Representar y verificar 234" data-answer="" id="ans4"></textarea></div></article></section>
@@ -114,7 +214,7 @@ main,.container{width:min(100%,calc(var(--content) + 2rem));padding:clamp(.75rem
 <article class="exercise expert" data-level="e"><h3>Ejercicio 16 · Debatir los límites del modelo escolar</h3><div class="meta"><span class="badge">15 min</span></div><p class="small method-hint">Distingue el modelo matemático escolar de los objetos históricos.</p><div class="task">Responde en cinco a siete frases a esta afirmación: «Un quipu puede reducirse a una calculadora decimal». Usa la estructura: «Desde el punto de vista matemático…; desde el punto de vista histórico y cultural…; por eso…». Incluye una propiedad del modelo escolar, una función documental posible de los quipus y un límite de la comparación.</div><div class="answer"><textarea aria-label="Respuesta del Ejercicio 16 — Debatir los límites del modelo escolar" data-answer="" id="ans16"></textarea></div></article></section>
 <section class="note"><strong>Síntesis:</strong> verifico que el número inicial, la representación y la lectura cruzada coinciden; escribo una frase matemática en español y una frase que limite el alcance del modelo escolar.</section>
 <section aria-labelledby="titulo-seccion-19" class="card" id="traza-exposicion"><div class="title"><h2 id="titulo-seccion-19">5. Producción para la exposición</h2><p>Conserva esta producción para la exposición final.</p></div><div class="grid"><div class="card"><h3>Soporte</h3><p>Miniquipu escolar o esquema con un número entero de tres cifras para el recorrido común, ampliable a cuatro cifras en consolidación y razonamiento.</p></div><div class="card"><h3>Comprobación</h3><p>Descomposición decimal y lectura cruzada por otro grupo.</p></div><div class="card"><h3>Mediación</h3><p>Dos frases en español: una explica el código y otra señala el límite histórico del modelo.</p></div><div class="card"><h3>Criterio observable</h3><p>El número inicial, la representación y la lectura final coinciden.</p></div></div></section><section aria-labelledby="titulo-seccion-20" class="rubric card" id="rubrica"><div class="title"><h2 id="titulo-seccion-20">6. Criterios de logro</h2><p>Comprueba la exactitud matemática, la prudencia cultural, la claridad en español y la cooperación.</p></div><div aria-label="Tabla desplazable: Criterios de logro" class="table-wrap" role="region" tabindex="0"><table><caption>Tabla: Criterios de logro</caption><thead><tr><th scope="col">Criterio</th><th scope="col">Peso</th><th scope="col">Indicador observable</th></tr></thead><tbody><tr><td>Comprensión matemática</td><td>30 %</td><td>Codifica, lee y calcula con exactitud.</td></tr><tr><td>Procedimiento y verificación</td><td>15 %</td><td>Explicita la estrategia, descompone y comprueba el resultado.</td></tr><tr><td>Interpretación cultural</td><td>20 %</td><td>Distingue objeto histórico, hipótesis y modelo escolar.</td></tr><tr><td>Comunicación en español</td><td>15 %</td><td>Redacta frases comprensibles, conectadas y adecuadas a la tarea.</td></tr><tr><td>Vocabulario matemático y cultural</td><td>10 %</td><td>Usa con precisión posición, cifra, marca, nudo y descomposición.</td></tr><tr><td>Autonomía y mediación</td><td>10 %</td><td>Conserva su trabajo, realiza una lectura cruzada y reformula.</td></tr></tbody></table></div></section>
-<details class="card extension-block" id="extensiones"><summary aria-controls="extensiones-contenu">7. Contexto asociado</summary><div id="extensiones-contenu"><div class="ext-explain">Síntesis — El Qhapaq Ñan fue una red vial andina que articuló territorios, comunidades y espacios de funciones diversas. La fotografía muestra solamente un tramo pavimentado y no permite deducir por sí sola la extensión ni el funcionamiento de toda la red.<br/>Uso DNL-matemáticas — Describe dos elementos geométricos visibles. Propón una magnitud que podría medirse y explica qué escala o dato faltaría para efectuar un cálculo, sin inventar valores.</div><div class="grid"><div class="card"><a aria-label="Fotografía de un tramo del camino inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Part_of_the_Inca_Trail.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Tramo empedrado del camino inca hacia Machu Picchu" class="extension-image" data-fallback-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Part_of_the_Inca_Trail.jpg" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="3120" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Part_of_the_Inca_Trail.jpg" width="4160"/></a><p class="small">Tramo empedrado del camino inca hacia Machu Picchu. La imagen permite describir formas y proponer medidas, pero no contiene una escala.</p></div></div></div></details><details class="card extension-block" id="extension-yupana"><summary aria-controls="extension-yupana-contenu">8. Yupana</summary><div id="extension-yupana-contenu"><div class="ext-explain">Síntesis — La yupana designa un tipo de tablero andino asociado, según las interpretaciones actuales, con prácticas de cálculo. Los procedimientos exactos y sus variantes siguen siendo objeto de debate. Los quipus sirvieron, entre otras funciones, para registrar, organizar y transmitir información; su estudio no se reduce a una única función.<br/>Uso DNL-matemáticas — Formula una hipótesis sobre cómo un tablero puede ayudar a organizar cantidades. Distingue claramente la hipótesis de un hecho comprobado y explica qué datos serían necesarios para verificarla.</div><div class="grid"><div class="card"><a aria-label="Representación histórica de una yupana en la obra de Guaman Poma de Ayala (se abre en una nueva pestaña)" class="imglink" href="https://en.wikipedia.org/wiki/Yupana" rel="noopener noreferrer" target="_blank" title="Abrir la página de referencia en una pestaña nueva"><img alt="Representación histórica de una yupana en la obra de Guaman Poma de Ayala" class="extension-image" data-fallback-src="https://en.wikipedia.org/wiki/Special:Redirect/file/Quipucamayoc.jpg" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quipucamayoc.jpg?width=1200"/></a><p class="small">Representación histórica asociada a la yupana en la obra de Guaman Poma de Ayala. La imagen es un documento histórico, no una prueba de un procedimiento de cálculo único.</p></div></div></div></details><div class="actions no-print">
+<details class="card extension-block" id="extensiones"><summary aria-controls="extensiones-contenu">7. Contexto asociado</summary><div id="extensiones-contenu"><div class="ext-explain">Síntesis — El Qhapaq Ñan fue una red vial andina que articuló territorios, comunidades y espacios de funciones diversas. La fotografía muestra solamente un tramo pavimentado y no permite deducir por sí sola la extensión ni el funcionamiento de toda la red.<br/>Uso DNL-matemáticas — Describe dos elementos geométricos visibles. Propón una magnitud que podría medirse y explica qué escala o dato faltaría para efectuar un cálculo, sin inventar valores.</div><div class="grid"><div class="card"><a aria-label="Fotografía de un tramo del camino inca (se abre en una nueva pestaña)" class="imglink" href="https://commons.wikimedia.org/wiki/File:Part_of_the_Inca_Trail.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Tramo empedrado del camino inca hacia Machu Picchu" class="extension-image" data-fallback-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Part_of_the_Inca_Trail.jpg" data-offline-message="Imagen no disponible sin conexión." decoding="async" height="3120" loading="eager" referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Part_of_the_Inca_Trail.jpg" style="max-width:100%;height:auto" width="4160"/></a><p class="small media-credit">Photographie : Mx. Granger, 18 décembre 2017, CC0 1.0, via Wikimedia Commons.</p><p class="small">Tramo empedrado del camino inca hacia Machu Picchu. La imagen permite describir formas y proponer medidas, pero no contiene una escala.</p></div></div></div></details><details class="card extension-block" id="extension-yupana"><summary aria-controls="extension-yupana-contenu">8. Yupana</summary><div id="extension-yupana-contenu"><div class="ext-explain">Síntesis — La yupana designa un tipo de tablero andino asociado, según las interpretaciones actuales, con prácticas de cálculo. Los procedimientos exactos y sus variantes siguen siendo objeto de debate. Los quipus sirvieron, entre otras funciones, para registrar, organizar y transmitir información; su estudio no se reduce a una única función.<br/>Uso DNL-matemáticas — Formula una hipótesis sobre cómo un tablero puede ayudar a organizar cantidades. Distingue claramente la hipótesis de un hecho comprobado y explica qué datos serían necesarios para verificarla.</div><div class="grid"><div class="card"><a aria-label="Representación histórica de una yupana en la obra de Guaman Poma de Ayala (se abre en una nueva pestaña)" class="imglink" href="https://en.wikipedia.org/wiki/Yupana" rel="noopener noreferrer" target="_blank" title="Abrir la página de referencia en una pestaña nueva"><img alt="Representación histórica de una yupana en la obra de Guaman Poma de Ayala" class="extension-image" data-fallback-src="https://en.wikipedia.org/wiki/Special:Redirect/file/Quipucamayoc.jpg" data-offline-message="Imagen no disponible sin conexión." decoding="async" loading="eager" referrerpolicy="no-referrer" src="https://commons.wikimedia.org/wiki/Special:FilePath/Quipucamayoc.jpg?width=1200"/></a><p class="small media-credit">Image : Joxemai4, domaine public, via Wikimedia Commons.</p><p class="small">Representación histórica asociada a la yupana en la obra de Guaman Poma de Ayala. La imagen es un documento histórico, no una prueba de un procedimiento de cálculo único.</p></div></div></div></details><div class="actions no-print">
 <button data-action="download" type="button">Descargar respuestas</button><button class="ghost" data-action="clear" type="button">Borrar respuestas</button><button class="secondary" data-action="print" type="button">Imprimir ficha y respuestas</button><p aria-live="polite" class="visually-hidden" id="estado-acciones" role="status"></p><button class="ghost" data-action="reset-extensions" type="button">Replegar las extensiones</button></div>
 </main>
 <footer role="contentinfo"><p>🌄 Ficha de trabajo DNL · Matemáticas en español · Quipus incas y valor posicional · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer>
@@ -225,24 +325,13 @@ main,.container{width:min(100%,calc(var(--content) + 2rem));padding:clamp(.75rem
     });
   });
 })();</script>
-<script id="script-extensions-trabajo">(() => {
+<script id="script-extensions-accessibles">(() => {
   "use strict";
-  const prefix = "dnl-incas-trabajo-extension-v1:";
   const items = [...document.querySelectorAll("details.extension-block")];
-  const closeAll = () => items.forEach((item, index) => {
-    const key = prefix + (item.id || index + 1);
-    item.open = false;
-    try { localStorage.setItem(key, "closed"); } catch (_) {}
-  });
-  items.forEach((item, index) => {
-    const key = prefix + (item.id || index + 1);
-    item.open = false;
-    item.addEventListener("toggle", () => {
-      try { localStorage.setItem(key, item.open ? "open" : "closed"); } catch (_) {}
-    });
-  });
-  document.querySelector('[data-action="clear"]')?.addEventListener("click", closeAll);
-  window.addEventListener("pageshow", closeAll);
+  const closeAll = () => items.forEach(item => { item.open = false; item.removeAttribute("open"); });
   closeAll();
-})();</script><script id="extension-policy-module1-final">(()=>{"use strict";const p=[...document.querySelectorAll("details.extension,details.extension-block,details.card.extension-block")];const c=()=>p.forEach(x=>{x.open=false;x.removeAttribute("open")});c();window.addEventListener("load",c);window.addEventListener("pageshow",c);window.addEventListener("beforeunload",c);document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")c()});document.addEventListener("dnl:reset",c)})();</script>
-</body></html>
+  window.addEventListener("pageshow", closeAll);
+  document.querySelector('[data-action="reset-extensions"]')?.addEventListener("click", closeAll);
+  document.addEventListener("dnl:reset", closeAll);
+  document.querySelector('[data-action="clear"]')?.addEventListener('click', closeAll);
+})();</script></body></html>
