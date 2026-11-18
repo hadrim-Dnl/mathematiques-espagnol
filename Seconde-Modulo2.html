@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+
 
 <html lang="fr">
 <head>
@@ -303,7 +304,24 @@ header.hero > .badge {
     }
 }
 </style>
-<style id="corrections-link-style">.top-actions{display:flex;flex-wrap:wrap;gap:.5rem}.corrections-link{background:rgb(200 138 36/.95)!important;border-color:#fff!important;color:#fff!important}.corrections-link:hover,.corrections-link:focus-visible{background:#fff!important;color:var(--forest-dark)!important}@media(max-width:35.99rem){.top-actions{display:grid!important;grid-template-columns:1fr!important}.top-actions .lang-switch{width:100%!important}}@media print{.corrections-link{display:none!important}}</style></head>
+<style id="corrections-link-style">.top-actions{display:flex;flex-wrap:wrap;gap:.5rem}.corrections-link{background:rgb(200 138 36/.95)!important;border-color:#fff!important;color:#fff!important}.corrections-link:hover,.corrections-link:focus-visible{background:#fff!important;color:var(--forest-dark)!important}@media(max-width:35.99rem){.top-actions{display:grid!important;grid-template-columns:1fr!important}.top-actions .lang-switch{width:100%!important}}@media print{.corrections-link{display:none!important}}</style><style id="header-nav-visibility-fix">
+/* Correctifs de lisibilité des en-têtes et navigations */
+:root{--nav-bg:#fffdf8;--nav-text:#173235;--nav-link:#075a63;--nav-hover-bg:#dcefeb;--nav-hover-text:#063f3a;--nav-active-bg:#8a3b18;--nav-active-text:#fff}
+header>.hero-bg,.header>.hero-bg{width:100vw!important;max-width:none!important;margin-inline:calc(50% - 50vw)!important;background:#e8eeeb!important}
+header>.hero-bg a,.header>.hero-bg a{width:100%!important}
+header>.hero-bg img,.header>.hero-bg img{width:100%!important;max-width:none!important;height:auto!important;min-height:clamp(15rem,48vw,32rem)!important;max-height:42rem!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 45%!important;filter:none!important;opacity:1!important}
+.nav,body>nav{color:var(--nav-text)!important;background:var(--nav-bg)!important}
+.nav *,.nav-inner *,body>nav *{text-shadow:none!important}
+.nav strong,.nav-inner strong,.nav span,.nav-inner span,body>nav strong,body>nav span{color:var(--nav-text)!important}
+.nav a,.nav-inner a,body>nav a{color:var(--nav-link)!important;background:transparent!important;border-color:transparent!important;text-decoration-color:currentColor!important}
+.nav a:visited,.nav-inner a:visited,body>nav a:visited{color:#554070!important}
+.nav a:hover,.nav-inner a:hover,body>nav a:hover{color:var(--nav-hover-text)!important;background:var(--nav-hover-bg)!important}
+.nav a[aria-current="page"],.nav-inner a[aria-current="page"],body>nav a[aria-current="page"],.nav a.active,.nav-inner a.active,body>nav a.active{color:var(--nav-active-text)!important;background:var(--nav-active-bg)!important;border-color:var(--nav-active-bg)!important}
+.nav a:focus-visible,.nav-inner a:focus-visible,body>nav a:focus-visible{color:var(--nav-hover-text)!important;background:#fff4cc!important}
+@media(max-width:47.999rem){header>.hero-bg img,.header>.hero-bg img{min-height:16rem!important;max-height:28rem!important;object-position:center!important}}
+@media(max-width:23.4375rem){header>.hero-bg img,.header>.hero-bg img{min-height:14rem!important;max-height:24rem!important}}
+@media print{header>.hero-bg,.header>.hero-bg{display:none!important}.nav,body>nav{display:none!important}}
+</style></head>
 <body><a class="skip-link" href="#contenu-principal">Aller au contenu principal</a><div class="header" id="top">
 <div class="header-content"><div class="top-actions"><a aria-label="Ouvrir la version espagnole du module" class="lang-switch" href="Seconde-Modulo2-ES-avec-lien-FR.html">🇪🇸 Version espagnole</a><a aria-label="Ouvrir la page des corrections" class="lang-switch corrections-link" href="index1.html">🔐 Accéder aux corrections</a></div>
 <h1>Seconde — Module 2 — Géométrie, patrimoine et médiation mathématique</h1>

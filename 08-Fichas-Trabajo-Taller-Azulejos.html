@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+
 
 <html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <link href="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Ctitle%3EBandera%20de%20Espa%C3%B1a%3C%2Ftitle%3E%0A%3Cdesc%3EFavicon%20con%20tres%20franjas%20horizontales%20roja%2C%20amarilla%20y%20roja.%3C%2Fdesc%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2210%22%20fill%3D%22%23AA151B%22%2F%3E%0A%3Crect%20y%3D%2216%22%20width%3D%2264%22%20height%3D%2232%22%20fill%3D%22%23F1BF00%22%2F%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2262.5%22%20height%3D%2262.5%22%20rx%3D%229.25%22%0A%20%20%20%20%20%20fill%3D%22none%22%20stroke%3D%22%237A1015%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E" id="favicon-drapeau-espagnol" rel="icon" type="image/svg+xml"/>
@@ -230,9 +231,24 @@ html{overflow-x:visible;scroll-padding-top:1rem}body{min-width:0;max-width:100%;
 .nav,nav{position:static;overflow:visible;backdrop-filter:none}.nav-inner,body>nav{display:grid;grid-template-columns:minmax(0,1fr);gap:.45rem;width:min(100%,var(--max));margin-inline:auto;overflow:visible}.nav-title,.nav-inner>strong,body>nav>strong{position:static;grid-column:1/-1;white-space:normal;text-align:center}.nav-inner>a,body>nav>a{display:flex;min-width:0;min-height:2.75rem;align-items:center;justify-content:center;text-align:center;white-space:normal}main,.container{width:min(100%,calc(var(--max) + 2rem));padding:clamp(.75rem,2.2vw,2rem)}.grid>*,.align-grid>*,.gallery>*,.video-grid>*,.cols>*{min-width:0}.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}button,.nav a,nav a,summary{min-width:2.75rem;min-height:2.75rem}
 @media(min-width:23.4375rem){.nav-inner,body>nav{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(min-width:48rem){.cols,.grid,.gallery,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}table{min-width:100%}}@media(min-width:64rem){.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-content:center}.nav-title,.nav-inner>strong,body>nav>strong{flex-basis:100%}}@media(max-width:23.4375rem){.hero-photo-below .hero-content{padding:1.25rem 0}.hero-photo-below .hero-bg{width:100%;margin-bottom:.75rem}main,.container{padding:.75rem}.actions>button,.print-actions>button{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}@media(forced-colors:active){button,.nav a,nav a,.tag,.badge{border:1px solid ButtonText}}@media print{html,body{overflow:visible}.nav,nav,.skip,.no-print,button,.actions,.print-actions,.video,.video-grid{display:none!important}.hero-photo-below{display:block;padding:.5cm;color:#111;background:#fff;border-bottom:1px solid #777}.hero-photo-below .hero-content{width:auto;padding:0}.hero-photo-below .hero-content h1,.hero-photo-below .hero-content p{color:#111;text-shadow:none}.hero-photo-below .hero-bg{display:none}.table-wrap{overflow:visible}table{min-width:0}thead{display:table-header-group}}
 </style>
-
-
-</head><body><a class="skip" href="#contenido">Ir al contenido principal</a>
+<style id="header-nav-visibility-fix">
+/* Correctifs de lisibilité des en-têtes et navigations */
+:root{--nav-bg:#fffdf8;--nav-text:#173235;--nav-link:#075a63;--nav-hover-bg:#dcefeb;--nav-hover-text:#063f3a;--nav-active-bg:#8a3b18;--nav-active-text:#fff}
+header>.hero-bg,.header>.hero-bg{width:100vw!important;max-width:none!important;margin-inline:calc(50% - 50vw)!important;background:#e8eeeb!important}
+header>.hero-bg a,.header>.hero-bg a{width:100%!important}
+header>.hero-bg img,.header>.hero-bg img{width:100%!important;max-width:none!important;height:auto!important;min-height:clamp(15rem,48vw,32rem)!important;max-height:42rem!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:center 45%!important;filter:none!important;opacity:1!important}
+.nav,body>nav{color:var(--nav-text)!important;background:var(--nav-bg)!important}
+.nav *,.nav-inner *,body>nav *{text-shadow:none!important}
+.nav strong,.nav-inner strong,.nav span,.nav-inner span,body>nav strong,body>nav span{color:var(--nav-text)!important}
+.nav a,.nav-inner a,body>nav a{color:var(--nav-link)!important;background:transparent!important;border-color:transparent!important;text-decoration-color:currentColor!important}
+.nav a:visited,.nav-inner a:visited,body>nav a:visited{color:#554070!important}
+.nav a:hover,.nav-inner a:hover,body>nav a:hover{color:var(--nav-hover-text)!important;background:var(--nav-hover-bg)!important}
+.nav a[aria-current="page"],.nav-inner a[aria-current="page"],body>nav a[aria-current="page"],.nav a.active,.nav-inner a.active,body>nav a.active{color:var(--nav-active-text)!important;background:var(--nav-active-bg)!important;border-color:var(--nav-active-bg)!important}
+.nav a:focus-visible,.nav-inner a:focus-visible,body>nav a:focus-visible{color:var(--nav-hover-text)!important;background:#fff4cc!important}
+@media(max-width:47.999rem){header>.hero-bg img,.header>.hero-bg img{min-height:16rem!important;max-height:28rem!important;object-position:center!important}}
+@media(max-width:23.4375rem){header>.hero-bg img,.header>.hero-bg img{min-height:14rem!important;max-height:24rem!important}}
+@media print{header>.hero-bg,.header>.hero-bg{display:none!important}.nav,body>nav{display:none!important}}
+</style></head><body><a class="skip" href="#contenido">Ir al contenido principal</a>
 <header class="hero hero-photo-below" id="top"><div class="hero-content">
 <span class="tag">Matemáticas en español</span><span class="tag">Tesela · regla · comprobación</span><span class="tag">Seconde · sesión 3</span>
 <h1>Ficha 08 — Trabajo — Sesión 3 — Construir una tesela y comprobar una regla de teselación</h1>
