@@ -1,6 +1,4 @@
 <!doctype html>
-
-
 <html lang="es">
 <head>
 <meta charset="utf-8"/>
@@ -19,7 +17,11 @@
 <meta content="Alhambra: observar un motivo y formular una hipótesis | DNL Matemáticas" name="twitter:title"/>
 <meta content="Curso DNL de Matemáticas en español sobre la Alhambra: observar un motivo patrimonial, identificar simetrías, formular una hipótesis geométrica y comprobarla con herramientas y propiedades." name="twitter:description"/>
 <meta content="Vista de la Alhambra para un curso DNL de Matemáticas sobre motivos geométricos, simetrías e hipótesis" name="twitter:image:alt"/>
-<style id="styles-alhambra-cours-consolides">
+
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+
+
+<style id="styles-uiux-wcag-22-aa">
 :root{--ink:#21302f;--muted:#5d6b68;--bg:#f3eadc;--paper:#fffefb;--soft:#fff4e5;--line:#dcc9aa;--primary:#8a3b12;--secondary:#006d77;--accent:#d6a23a;--deep:#172f31;--green:#2f6b4f;--blue:#1f6f8b;--purple:#5a4b83;--red:#9c2f24;--radius:1rem;--shadow:0 6px 20px rgba(26,39,38,.10);--max:76rem;--focus:#ffbf47}
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:4.9rem;-webkit-text-size-adjust:100%}body{min-width:20rem;margin:0;color:var(--ink);font-family:Inter,"Aptos","Segoe UI",Roboto,Arial,sans-serif;font-size:clamp(.98rem,.94rem + .18vw,1.08rem);line-height:1.68;background:radial-gradient(circle at 8% 0,rgba(0,109,119,.12),transparent 28rem),linear-gradient(180deg,#fffdf8,var(--soft));overflow-wrap:anywhere}img,svg,video,canvas,iframe{max-width:100%}img{height:auto}a{color:var(--primary);text-underline-offset:.18em;text-decoration-thickness:.08em}:is(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--focus);outline-offset:3px}.skip{position:fixed;z-index:3000;top:.65rem;left:.65rem;padding:.7rem 1rem;color:#fff;background:var(--deep);border:3px solid var(--focus);border-radius:.65rem;text-decoration:none;transform:translateY(-180%);transition:transform .18s ease}.skip:focus{transform:none}
 header.hero{position:relative;isolation:isolate;min-height:clamp(21rem,60vw,31rem);display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:.25rem;overflow:hidden;padding:clamp(3rem,9vw,6rem) 1rem clamp(2.5rem,7vw,4.5rem);color:#fff;text-align:center;background:linear-gradient(135deg,var(--deep),var(--secondary),var(--primary));border-bottom:.35rem solid var(--accent);box-shadow:0 10px 28px rgba(20,30,30,.22)}header.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,18,20,.50),rgba(8,18,20,.24) 48%,rgba(8,18,20,.43));pointer-events:none}.hero-bg{position:absolute;inset:0;z-index:-2}.hero-bg,.hero-bg a,.hero-bg img{width:100%;height:100%}.hero-bg img{display:block;object-fit:cover;object-position:center;filter:brightness(.9) saturate(1.06) contrast(1.03)}.hero-content{position:relative;z-index:1;width:min(100%,70rem)}header.hero>:not(.hero-bg){position:relative;z-index:1}header.hero h1{flex-basis:100%;max-width:68rem;margin:.65rem auto;color:#fff;font-size:clamp(2rem,8vw,4.1rem);line-height:1.08;letter-spacing:-.03em;text-wrap:balance;text-shadow:0 2px 5px rgba(0,0,0,.95),0 0 15px rgba(0,0,0,.65)}header.hero p{flex-basis:100%;max-width:62rem;margin:.5rem auto;color:#fff;font-size:clamp(1rem,1rem + .4vw,1.28rem);line-height:1.55;text-shadow:0 2px 5px rgba(0,0,0,.9)}.tag,.badge,.pill,.chip{display:inline-flex;align-items:center;justify-content:center;min-height:2rem;margin:.2rem;padding:.35rem .72rem;color:var(--deep);background:linear-gradient(135deg,#fff,#f4d58a);border:1px solid rgba(255,255,255,.55);border-radius:999px;font-size:.84rem;font-weight:850;line-height:1.2}.print-actions{display:flex;justify-content:center;width:min(100%,var(--max));margin:1rem auto;padding:0 1rem}
@@ -33,8 +35,8 @@ main,.container{width:min(calc(100% - 1rem),var(--max));margin-inline:auto;paddi
 @media print{thead{display:table-header-group}tfoot{display:table-footer-group}body{color:#111;background:#fff;font-size:10pt}.nav,.no-print,button,.actions,.video-grid,.video,.print-actions{display:none!important}header.hero{min-height:0;padding:1cm;color:#111;background:#fff;border-bottom:2px solid #333;box-shadow:none}.hero-bg,header.hero::after{display:none}header.hero h1,header.hero p{color:#111;text-shadow:none}main,.container{width:100%;padding:0}.card,.exercise,.rubric,.note,details{margin:.45cm 0;padding:.35cm;background:#fff;box-shadow:none;break-inside:auto;page-break-inside:auto}h2,h3,h4,.title,.formula,aside,table,figure,.schematic-support{break-inside:avoid;page-break-inside:avoid}.table-wrap{overflow:visible}table{font-size:8pt}a[href]::after{content:none}}
 
 .hero-photo-below{display:flex;min-height:0;padding:0;flex-direction:column;overflow:visible}.hero-photo-below::before,.hero-photo-below::after{display:none;content:none}.hero-photo-below .hero-content{order:0;width:min(calc(100% - 1.5rem),68rem);margin-inline:auto;padding:clamp(1.5rem,4vw,2.75rem) 0;background:transparent;border:0;box-shadow:none;backdrop-filter:none}.hero-photo-below .hero-bg{position:relative;inset:auto;z-index:0;order:1;width:min(100%,68rem);height:auto;margin:0 auto clamp(1rem,3vw,2rem);overflow:hidden;background:#172f31;border:0;box-shadow:none}.hero-photo-below .hero-bg a,.hero-photo-below .hero-bg img{display:block;width:100%;height:auto}.hero-photo-below .hero-bg img{aspect-ratio:8866/1922;max-height:none;object-fit:contain;object-position:center;background:#172f31;filter:none;opacity:1}@media(max-width:23.4375rem){.hero-photo-below .hero-content{width:100%;padding:1.25rem .75rem}.hero-photo-below .hero-bg{width:100%;margin-bottom:.75rem}}@media print{.hero-photo-below .hero-bg{display:none}}
-</style>
-<style id="audit-alhambra-final">
+
+
 
 body{min-width:0!important;overflow-x:clip;overflow-wrap:break-word}
 main,.container,section,article,aside,figure,.card,.exercise,.rubric,.note,.box,.task,.cols>section{min-width:0;max-width:100%}
@@ -57,7 +59,8 @@ footer>*{max-width:100%;margin-inline:auto;text-align:center}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){*{box-shadow:none!important}:is(a,button,input,textarea,select,summary){forced-color-adjust:auto}}
 @media print{.hero-content{padding:0;color:#111;background:#fff;border:0}.hero-bg,header.hero::after{display:none!important}header.hero h1,header.hero p{color:#111!important;text-shadow:none!important}.table-wrap,.table-region{overflow:visible}table{min-width:0}footer{position:static;color:#111;background:#fff;border-top:1px solid #333}footer p{color:#111}}
-</style><meta content="strict-origin-when-cross-origin" name="referrer"/><style id="correctif-photo-hero-visible">
+
+
 /* Correctif final : photographie du haut pleinement visible, sans filtre ni voile. */
 header.hero, .hero { position: relative !important; isolation: isolate !important; overflow: hidden !important; }
 header.hero::before, .hero::before,
@@ -99,7 +102,8 @@ header.hero h1, .hero h1, header.hero p, .hero p,
 header.hero .tag, .hero .tag, header.hero .badge, .hero .badge {
   text-shadow: 0 2px 8px rgb(0 0 0 / 95%) !important;
 }
-</style><style id="suppression-encadre-titre-hero">
+
+
 /* Supprime uniquement le grand encadre colore devant la photo. */
 .hero .hero-content,
 header.hero .hero-content,
@@ -137,8 +141,8 @@ body > header.hero .hero-content {
         text-shadow: none !important;
     }
 }
-</style>
-<style id="items-hero-centres-et-compacts">
+
+
 /*
    Petits items situes dans l'en-tete photographie :
    DNL Matematicas - Espanol, Sesion 1, Datos demograficos, etc.
@@ -216,8 +220,8 @@ header.hero > .badge {
         padding: 0.12rem 0.32rem !important;
     }
 }
-</style>
-<style id="correctif-photo-mobile">
+
+
 .hero,
 header.hero {
     position: relative !important;
@@ -326,8 +330,8 @@ header.hero > p:not(.credit) {
         text-shadow: none !important;
     }
 }
-</style>
-<style id="header-nav-visibility-fix">
+
+
 /* Correctifs de lisibilité des en-têtes et navigations */
 :root{--nav-bg:#fffdf8;--nav-text:#173235;--nav-link:#075a63;--nav-hover-bg:#dcefeb;--nav-hover-text:#063f3a;--nav-active-bg:#8a3b18;--nav-active-text:#fff}
 header>.hero-bg,.header>.hero-bg{width:100vw!important;max-width:none!important;margin-inline:calc(50% - 50vw)!important;background:#e8eeeb!important}
@@ -344,7 +348,8 @@ header>.hero-bg img,.header>.hero-bg img{width:100%!important;max-width:none!imp
 @media(max-width:47.999rem){header>.hero-bg img,.header>.hero-bg img{min-height:16rem!important;max-height:28rem!important;object-position:center!important}}
 @media(max-width:23.4375rem){header>.hero-bg img,.header>.hero-bg img{min-height:14rem!important;max-height:24rem!important}}
 @media print{header>.hero-bg,.header>.hero-bg{display:none!important}.nav,body>nav{display:none!important}}
-</style><style id="all-navigation-contrast-fix">
+
+
 /* Lisibilité renforcée de toutes les navigations */
 :root{
   --nav-strong-bg:#fffdf7;
@@ -423,9 +428,24 @@ header>.hero-bg img,.header>.hero-bg img{width:100%!important;max-width:none!imp
 @media print{
   :where(nav,[role="navigation"],.nav,.navbar,.navigation,.menu,.menu-bar,.top-nav,.main-nav,.site-nav,.tabs,.tablist,.toc,.sommaire){display:none!important}
 }
+
+/* Ordre final de l'en-tete : photographie, titre, commandes conservees */
+header.ui-header-final{display:flex!important;min-height:0!important;padding:0!important;flex-direction:column!important;overflow:visible!important;text-align:center!important}
+header.ui-header-final::before,header.ui-header-final::after{display:none!important;content:none!important}
+header.ui-header-final>.hero-bg,header.ui-header-final>.hero-media{position:relative!important;inset:auto!important;z-index:auto!important;order:0!important;display:flex!important;width:100%!important;max-width:100%!important;height:auto!important;min-height:0!important;align-items:center!important;justify-content:center!important;margin:0 auto!important;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important}
+header.ui-header-final>.hero-bg>a,header.ui-header-final>.hero-media>a,header.ui-header-final>.hero-bg>picture,header.ui-header-final>.hero-media>picture{display:flex!important;width:auto!important;max-width:100%!important;height:auto!important;align-items:center!important;justify-content:center!important;margin-inline:auto!important}
+header.ui-header-final :is(.hero-bg,.hero-media) img{display:block!important;width:auto!important;max-width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;margin-inline:auto!important;filter:none!important;opacity:1!important}
+header.ui-header-final>.hero-content{position:relative!important;inset:auto!important;z-index:auto!important;order:1!important;width:min(100%,76rem)!important;margin:0 auto!important;padding:clamp(1.15rem,4vw,2.4rem) clamp(.75rem,3vw,2rem)!important;background:transparent!important;border:0!important;box-shadow:none!important;text-align:center!important}
+header.ui-header-final>.hero-content>h1{max-width:27ch!important;margin:0 auto!important;color:#fff!important;text-shadow:none!important}
+header.ui-header-final>.hero-content>*:not(h1){display:none!important}
+header.ui-header-final>.top-actions{position:static!important;order:2!important;display:flex!important;flex-wrap:wrap!important;gap:.6rem!important;justify-content:center!important;width:min(100%,76rem)!important;margin:0 auto!important;padding:0 clamp(.75rem,3vw,2rem) 1rem!important}
+header.ui-header-final>.top-actions a{display:inline-flex!important;min-height:2.75rem!important;align-items:center!important;justify-content:center!important;padding:.65rem .95rem!important;color:#2b2108!important;background:#d6a23a!important;border:2px solid #fff3bf!important;border-radius:999px!important;font-weight:850!important;text-decoration:none!important}
+header.ui-header-final>.top-actions a:hover,header.ui-header-final>.top-actions a:focus-visible{color:#1f1805!important;background:#f2c65f!important;border-color:#fff!important}
+@media(max-width:23.4375rem){header.ui-header-final>.top-actions{display:grid!important;grid-template-columns:minmax(0,1fr)!important}header.ui-header-final>.top-actions a{width:100%!important}}
+@media print{header.ui-header-final :is(.hero-bg,.hero-media),header.ui-header-final>.top-actions{display:none!important}header.ui-header-final>.hero-content{padding:.5cm!important}header.ui-header-final>.hero-content>h1{color:#111!important}}
 </style></head>
 <body><a class="skip" href="#contenido">Ir al contenido principal</a>
-<header class="hero hero-photo-below" id="top"><div class="hero-content"><span class="tag">Matemáticas en español</span><span class="tag">Alhambra · observación · comprobación</span><h1>Sesión 1 — Observar un motivo patrimonial y formular una hipótesis</h1><p>De la observación visible a una hipótesis prudente, comprobable y formulada en español. Evidencia: croquis anotado, léxico y primera hipótesis.</p></div><div class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_panorama.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista panorámica de la Alhambra, Sierra Nevada y Granada" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1922" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_panorama.JPG?width=3840" width="8866"/></a></div></header>
+<header class="hero hero-photo-below ui-header-final" id="top"><figure class="hero-bg"><a class="imglink" href="https://commons.wikimedia.org/wiki/File:Alhambra_panorama.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista panorámica de la Alhambra, Sierra Nevada y Granada" data-offline-message="Imagen no disponible sin conexión." decoding="async" fetchpriority="high" height="1922" src="https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_panorama.JPG?width=3840" width="8866"/></a></figure><div class="hero-content"><h1>Sesión 1 — Observar un motivo patrimonial y formular una hipótesis</h1></div></header>
 <div aria-label="Impression du document / Impresión del documento" class="print-actions no-print" role="group"><button data-action="download-text" type="button">Descargar texto</button><button data-action="print" type="button">Imprimir</button></div>
 <nav aria-label="Navegación de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#formulario">Herramientas</a><a href="#herramientas-4eso">Propiedades</a><a href="#banco-metodos">Procedimientos</a><a href="#metodos">Justificar</a><a href="#transformaciones">Transformaciones</a><a href="#medidas">Medir</a><a href="#teselaciones">Distinguir</a><a href="#plantillas">Comunicar</a><a href="#entrenamiento-matematico">Verificar</a><a href="#videos-matematicos">Vídeos</a><a href="#extensiones">Patrimonio</a></div></nav>
 <main class="container" id="contenido" tabindex="-1">
