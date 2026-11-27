@@ -17,11 +17,90 @@ nav,.nav{max-width:100%}.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}:where(*,*::before,*::after){animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){:where(a,button,input,textarea,select,summary,[tabindex]):focus-visible{outline:3px solid Highlight!important}}
 @media print{nav,.nav,.skip,.skip-link,.print-actions,.actions,.no-print,header.ui-header-final>.ui-hero-actions{display:none!important}body{color:#111!important;background:#fff!important;font-size:10pt!important}header.ui-header-final>.ui-hero-media{display:none!important}header.ui-header-final>.ui-hero-title{padding:.5cm!important}header.ui-header-final>.ui-hero-title h1{color:#111!important}article,section,figure,table,details{break-inside:avoid;page-break-inside:avoid}thead{display:table-header-group}}
+</style><style data-uiux="module5">
+/* Socle UI responsive et accessible */
+:root{
+  --ui-bg:#f7f4ee;--ui-surface:#ffffff;--ui-text:#17202a;--ui-muted:#475569;
+  --ui-primary:#7a2f21;--ui-primary-dark:#572117;--ui-accent:#d97706;
+  --ui-border:#cbd5e1;--ui-focus:#005fcc;--ui-radius:.75rem;
+  --ui-shadow:0 .25rem 1rem rgba(15,23,42,.12);
+  --ui-space-1:.375rem;--ui-space-2:.625rem;--ui-space-3:1rem;--ui-space-4:1.5rem;
+  --ui-content:72rem;--ui-transition:160ms ease;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:100%;scroll-behavior:smooth;overflow-x:hidden}
+body{min-width:0;max-width:100%;margin:0;overflow-x:hidden;color:var(--ui-text);background:var(--ui-bg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+img,svg,video,canvas,iframe{display:block;max-width:100%;height:auto}
+iframe{width:100%;aspect-ratio:16/9;border:0}
+header img,header picture img{width:100%;height:auto;object-fit:cover;object-position:center}
+main,header>*,footer>*,.container,.wrap,.content,.nav-inner{width:min(100%,var(--ui-content));max-width:100%;margin-inline:auto}
+main{padding-inline:var(--ui-space-3)}
+p,li,td,th,summary,label,a,button{overflow-wrap:anywhere}
+h1,h2,h3,h4{line-height:1.2;text-wrap:balance}
+a{color:#075b9c;text-underline-offset:.18em}
+a:hover{color:#003f70;text-decoration-thickness:.14em}
+button,a,summary,input,select,textarea{transition:color var(--ui-transition),background-color var(--ui-transition),border-color var(--ui-transition),box-shadow var(--ui-transition),transform var(--ui-transition)}
+button,.button,[role="button"],summary,input[type="submit"],input[type="button"]{min-height:44px;min-width:44px}
+button,.button,[role="button"]{font:inherit}
+:focus-visible{outline:.2rem solid var(--ui-focus);outline-offset:.18rem;box-shadow:0 0 0 .22rem #fff}
+:focus:not(:focus-visible){outline:none}
+nav{position:relative;max-width:100%;background:var(--ui-surface)}
+.ui-nav-toggle{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;width:calc(100% - 2rem);margin:.5rem 1rem;padding:.7rem 1rem;border:2px solid var(--ui-primary);border-radius:var(--ui-radius);background:var(--ui-primary);color:#fff;font-weight:700;cursor:pointer}
+.ui-nav-toggle:hover,.ui-nav-toggle:active{background:var(--ui-primary-dark)}
+.ui-nav-panel{display:none;max-width:100%;padding:.5rem 1rem 1rem}
+.ui-nav-panel[data-open="true"]{display:flex;flex-direction:column;align-items:stretch;gap:.5rem}
+.ui-nav-panel>a,.ui-nav-panel>button,.ui-nav-panel .button{display:flex;align-items:center;min-height:44px;padding:.65rem .8rem;border-radius:.5rem}
+section,article,.card,.panel,details{max-width:100%}
+details{margin-block:var(--ui-space-3);border:1px solid var(--ui-border);border-radius:var(--ui-radius);background:var(--ui-surface)}
+summary{padding:.75rem 1rem;cursor:pointer;font-weight:700}
+details>*:not(summary){margin-inline:var(--ui-space-3)}
+table{width:100%;max-width:100%;border-collapse:collapse}
+.table-wrap,.table-responsive,[role="region"][aria-label*="Tabla"],[role="region"][aria-label*="Tableau"]{max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+th,td{padding:.6rem;vertical-align:top}
+pre,code{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+input,select,textarea{max-width:100%;font:inherit;font-size:1rem}
+textarea{width:100%;min-height:7rem;resize:vertical}
+footer{max-width:100%;padding:var(--ui-space-3);overflow-wrap:anywhere}
+@media (min-width:48rem){
+  main{padding-inline:var(--ui-space-4)}
+  .ui-nav-toggle{display:none}
+  .ui-nav-panel,.ui-nav-panel[data-open="true"]{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:.5rem;padding:.65rem 1rem}
+  .ui-nav-panel>a,.ui-nav-panel>button,.ui-nav-panel .button{width:auto}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media print{
+  :root{--ui-bg:#fff;--ui-text:#000;--ui-border:#777}
+  @page{size:A4;margin:12mm}
+  body{background:#fff;color:#000;font-size:10.5pt;overflow:visible}
+  .ui-nav-toggle,nav,.actions,button,[role="button"]{display:none!important}
+  main,header>*,footer>*{width:100%;max-width:none;padding-inline:0}
+  a{color:#000;text-decoration:underline}
+  a[href^="http"]::after{content:" (" attr(href) ")";font-size:8pt;word-break:break-all}
+  img,table,figure,details,section,article{break-inside:avoid}
+  details{display:block}
+  details>*{display:block!important}
+  .table-wrap,.table-responsive,[role="region"]{overflow:visible!important}
+  footer{position:static!important}
+}
+
+/* Centrage uniforme du pied de page */
+footer, footer p {
+  text-align: center;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > * {
+  width: 100%;
+  margin-inline: auto;
+}
 </style></head>
-<body><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
-<header aria-labelledby="titulo-principal" class="ui-header-final" id="inicio"><figure class="ui-hero-media"><img alt="Vista aérea del Eixample de Barcelona, con su trama urbana ortogonal y sus manzanas de chaflanes" decoding="async" fetchpriority="high" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eixample%20aire.jpg?width=1200"/></figure><div class="ui-hero-title"><h1 id="titulo-principal">Ficha 22 — Curso — Gaudí, funciones afines y estructuras</h1></div></header>
+<body><a class="skip-link" href="#contenu-principal">Saltar al contenido principal</a><a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+<header aria-labelledby="titulo-principal" class="ui-header-final" id="inicio"><figure class="ui-hero-media"><img alt="Vista aérea del Eixample de Barcelona, con su trama urbana ortogonal y sus manzanas de chaflanes" decoding="async" fetchpriority="high" loading="eager" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eixample%20aire.jpg?width=1200"/></figure><div class="ui-hero-title"><h1 id="titulo-principal">Ficha 22 — Curso — Gaudí, funciones afines y estructuras</h1></div></header>
 <nav aria-label="Navegación por las secciones de la ficha" class="nav"><div class="nav-inner"><strong>Navegación:</strong><a href="#resumen">1. Herramientas</a><a href="#modelos">2. Modelos</a><a href="#procedimientos">3. Métodos</a><a href="#entrenamiento">4. Entrenamiento</a><a href="#vocabulario">5. Vocabulario</a><a href="#6-sintesis-del-metodo">6. Síntesis</a><a href="#extensiones">7. Extensiones</a><a href="#inicio">Arriba</a></div></nav><div class="print-actions no-print"><button data-action="reset-extensions" type="button">Replegar las extensiones</button></div>
-<main id="contenido-principal" tabindex="-1">
+<main id="contenido-principal" tabindex="-1"><span class="sr-only" id="contenu-principal" tabindex="-1"></span>
 <section id="resumen"><h2 id="1-herramientas">1. Herramientas</h2><div class="grid"><div class="card wide"><h3 id="rutina-dnl">Rutina DNL</h3><ol><li><strong>Elijo</strong> una dirección visible en una imagen o un esquema.</li><li><strong>Coloco</strong> un sistema de coordenadas con unidades o graduaciones.</li><li><strong>Selecciono</strong> dos puntos justificados.</li><li><strong>Calculo</strong> la pendiente a = Δy / Δx.</li><li><strong>Escribo</strong> una ecuación y = ax + b.</li><li><strong>Concluyo</strong> con utilidad y límite del modelo.</li></ol></div><div class="card wide"><h3 id="frases-utiles">Frases útiles</h3><ul><li><em>Elegimos estos dos puntos porque...</em></li><li><em>La pendiente se calcula mediante...</em></li><li><em>La recta representa la dirección aparente del elemento.</em></li><li><em>Este modelo no describe la estructura completa.</em></li></ul></div></div><div class="warning" role="alert"><strong>Precaución didáctica:</strong> una recta observada en una fotografía puede representar una proyección o un eje aparente, no una prueba sobre las fuerzas o la estabilidad.</div><div class="language-help" lang="es"><strong>Ayuda lingüística:</strong> <em>Primero… Después… Por lo tanto… Sin embargo…</em> Estas expresiones permiten ordenar el cálculo y formular el límite del modelo.</div></section>
 <section id="modelos"><h2 id="2-modelos-lineales-de-la-sesion">2. Modelos lineales de la sesión</h2><div class="grid"><div class="card wide"><h3 id="2-1-pendiente-en-un-sistema-de-coordenadas">2.1 Pendiente en un sistema de coordenadas</h3><p>La pendiente de una recta no vertical es el cociente entre la variación vertical y la variación horizontal entre dos puntos distintos de la recta.</p><div class="formula">a = Δy / Δx = (y₂ − y₁) / (x₂ − x₁)</div><p><strong>Control:</strong> indicar siempre qué representan x e y y comprobar que Δx no vale 0.</p></div><div class="card wide"><h3 id="2-2-funci-n-af-n">2.2 Función afín</h3><p>La representación gráfica de una función afín definida por f(x)=ax+b es una recta no vertical; recíprocamente, toda recta no vertical es la representación de una función afín en el sistema de coordenadas elegido.</p><div class="formula">y = ax + b</div><p><strong>a</strong> es la pendiente y <strong>b</strong> es la ordenada al origen.</p></div><div class="card wide"><h3 id="2-3-recta-por-dos-puntos">2.3 Recta por dos puntos</h3><p>Dos puntos justificados permiten construir un modelo afín sencillo.</p><div class="formula">a = (y₂ − y₁)/(x₂ − x₁), luego b = y₁ − a·x₁</div><p><strong>Uso:</strong> eje aparente de una columna, borde de una cubierta, dirección simplificada de una línea arquitectónica.</p></div><div class="card wide"><h3 id="2-4-escala-y-unidades">2.4 Escala y unidades</h3><p>Si la imagen tiene una escala, se convierten las medidas antes de interpretar la pendiente en dimensiones reales.</p><div class="formula">medida real = medida en imagen × valor de escala</div><p><strong>Control:</strong> no mezclar cm, m y unidades del sistema de coordenadas.</p></div></div><div class="warning" role="alert"><strong>Límite:</strong> la función afín modeliza aquí una dirección aparente en un plano; no describe los materiales, las fuerzas, las cargas ni la estabilidad real.</div></section>
 <section id="procedimientos"><h2 id="3-metodos">3. Métodos</h2><div class="grid"><div class="card wide"><h3 id="metodo-a-calcular-una-pendiente">Método A · Calcular una pendiente</h3><ol><li>Identifico los puntos A(x₁;y₁) y B(x₂;y₂).</li><li>Calculo Δy = y₂ − y₁.</li><li>Calculo Δx = x₂ − x₁.</li><li>Calculo a = Δy / Δx.</li><li>Interpreto: subida por unidad horizontal.</li></ol></div><div class="card wide"><h3 id="metodo-b-escribir-una-ecuacion">Método B · Escribir una ecuación</h3><ol><li>Calculo a con dos puntos.</li><li>Uso y = ax + b.</li><li>Sustituyo un punto para hallar b.</li><li>Escribo la ecuación completa.</li><li>Compruebo con el otro punto.</li></ol></div><div class="card wide"><h3 id="metodo-c-usar-una-escala">Método C · Usar una escala</h3><ol><li>Identifico la correspondencia imagen / realidad.</li><li>Convierto las medidas necesarias.</li><li>Trabajo con unidades coherentes.</li><li>Calculo la pendiente.</li><li>Indico si la pendiente es del esquema o de la realidad convertida.</li></ol></div><div class="card wide"><h3 id="metodo-d-comparar-dos-modelos">Método D · Comparar dos modelos</h3><ol><li>Calculo una pendiente con un primer par de puntos.</li><li>Calculo otra pendiente con un segundo par.</li><li>Comparo los resultados.</li><li>Explico cuál se adapta mejor a la pregunta.</li><li>Formulo un límite.</li></ol></div></div></section>
@@ -32,4 +111,4 @@ nav,.nav{max-width:100%}.nav-inner,body>nav{display:flex;flex-wrap:wrap;justify-
 <details class="card extension" data-storage-key="gaudi22.course.extension.course-extension-1" id="course-extension-1"><summary aria-controls="extension-1">7.1. Barcelona, Eixample y modernismo</summary><section id="extension-1"><h2 id="7-1-barcelona-eixample-y-modernismo">7.1. Barcelona, Eixample y modernismo</h2><p>La cuadrícula del Eixample ofrece un contraste con líneas y direcciones variables en las obras de Gaudí.</p><figure><a aria-label="Abrir imagen: Vista aérea del Eixample de Barcelona" class="imglink" href="https://commons.wikimedia.org/wiki/File:Eixample_aire.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Vista aérea del Eixample de Barcelona" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Eixample%20aire.jpg?width=1200"/></a><figcaption>Vista aérea del Eixample de Barcelona.</figcaption><p class="small media-credit">Crédito: Alhzeiia, 2007, CC BY-SA 2.0, Wikimedia Commons.</p></figure><div class="video-container"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/UcdhsvKTR0g" title="Barcelona, Eixample y modernismo"></iframe></div></section></details>
 <details class="card extension" data-storage-key="gaudi22.course.extension.course-extension-2" id="course-extension-2"><summary aria-controls="extension-2">7.2. Columnas y direcciones aparentes</summary><section id="extension-2"><h2 id="7-2-columnas-y-direcciones-aparentes">7.2. Columnas y direcciones aparentes</h2><p>Las columnas de la Sagrada Familia permiten trabajar con ejes aparentes y direcciones en una imagen.</p><figure><a aria-label="Abrir imagen: Columnas reales de la Sagrada Familia" class="imglink" href="https://commons.wikimedia.org/wiki/File:Sagrada_Fam%C3%ADlia,_Columns.jpg" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Columnas reales de la Sagrada Familia" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada%20Fam%C3%ADlia%2C%20Columns.jpg?width=1200"/></a><figcaption>Columnas reales de la Sagrada Familia.</figcaption></figure><div class="video-container"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/1uX51VzdMxM" title="Columnas y direcciones aparentes"></iframe></div></section></details>
 <details class="card extension" data-storage-key="gaudi22.course.extension.course-extension-3" id="course-extension-3"><summary aria-controls="extension-3">7.3. Maquetas colgantes y experimentación</summary><section id="extension-3"><h2 id="7-3-maquetas-colgantes-y-experimentaci-n">7.3. Maquetas colgantes y experimentación</h2><p>Las maquetas con cuerdas y pesos ayudan a observar direcciones antes de construir, pero la explicación matemática de esta ficha se limita a las rectas y las pendientes.</p><figure><a aria-label="Abrir imagen: Columna real de la cripta de la Colònia Güell" class="imglink" href="https://commons.wikimedia.org/wiki/File:Columna_de_la_Cripta_de_la_Col%C3%B2nia_G%C3%BCell.JPG" rel="noopener noreferrer" target="_blank" title="Abrir la fotografía en una pestaña nueva"><img alt="Columna real de la cripta de la Colònia Güell" decoding="async" loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Columna%20de%20la%20Cripta%20de%20la%20Col%C3%B2nia%20G%C3%BCell.JPG?width=1200"/></a><figcaption>Columna real de la cripta de la Colònia Güell.</figcaption></figure><div class="video-container"><iframe allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/8UkVn2QxWgU" title="Maquetas colgantes y experimentación"></iframe></div></section></details>
-</main><footer class="footer"><p>🌄 Ficha de curso DNL · Matemáticas en español · « Gaudí, funciones afines y estructuras » · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer><script id="interactions">(()=>{"use strict";const sections=[...document.querySelectorAll("details.extension")];const closeAll=()=>sections.forEach(section=>{section.open=false;section.removeAttribute("open");});closeAll();addEventListener("pageshow",closeAll);addEventListener("load",closeAll);document.addEventListener("dnl-reset",closeAll);document.querySelector('[data-action="reset-extensions"]')?.addEventListener("click",closeAll);})();</script></body></html>
+</main><footer class="footer"><p>🌄 Ficha de curso DNL · Matemáticas en español · « Gaudí, funciones afines y estructuras » · Lycée-Pensionnat Sacré-Cœur, Reims · © 2026-2027 · CC BY-NC-SA 4.0.</p></footer><script id="interactions">(()=>{"use strict";const sections=[...document.querySelectorAll("details.extension")];const closeAll=()=>sections.forEach(section=>{section.open=false;section.removeAttribute("open");});closeAll();addEventListener("pageshow",closeAll);addEventListener("load",closeAll);document.addEventListener("dnl-reset",closeAll);document.querySelector('[data-action="reset-extensions"]')?.addEventListener("click",closeAll);})();</script><script data-uiux-nav="module5">(()=>{'use strict';document.querySelectorAll('nav').forEach((nav,index)=>{if(nav.dataset.uiMobileNav==='true')return;nav.dataset.uiMobileNav='true';const children=[...nav.childNodes];const panel=document.createElement('div');panel.className='ui-nav-panel';panel.id='ui-nav-panel-'+index;panel.dataset.open='false';children.forEach(node=>panel.appendChild(node));const button=document.createElement('button');button.type='button';button.className='ui-nav-toggle';button.setAttribute('aria-controls',panel.id);button.setAttribute('aria-expanded','false');button.textContent=document.documentElement.lang?.startsWith('es')?'Menú de navegación':'Menu de navigation';button.addEventListener('click',()=>{const open=panel.dataset.open!=='true';panel.dataset.open=String(open);button.setAttribute('aria-expanded',String(open))});nav.append(button,panel)});})();</script></body></html>
